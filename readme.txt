@@ -11,9 +11,9 @@ License: GPLv2
 M-Logger plugin allows to check PHP variables values during WordPress development process. 
 For example, if you need to check value of the $data variable, write follow code: 
 
-do_action( 'm_logger', $data, 'label' );
+do_action( 'm-logger', $data, 'label' );
 
-there is 'm_logger' - name of the hook, $data is a traced variable, 'label' - mark for this variable. 
+there are 'm-logger' is a name of the hook, $data is a traced variable, 'label' - a label for this variable. 
 
 Label is necessary because this action may be used to trace different variables at the same time.
 
