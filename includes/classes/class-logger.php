@@ -1,6 +1,8 @@
 <?php
 
-class M_Logger {
+namespace ML;
+
+class Logger {
 
     private $data;
     private $label;

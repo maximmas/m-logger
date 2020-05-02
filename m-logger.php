@@ -8,10 +8,10 @@ Author: Maxim Maslov
 Author URI: maximmaslov.ru
 License: GPLv2
 Network: true
-Text domain: m_logger
+Text domain: ML
 */
 
-/*  Copyright 2018  Maxim Maslov  (email : me@maximmaslov.ru )
+/*  Copyright 2020  Maxim Maslov  (email : me@maximmaslov.ru )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,8 +31,9 @@ Text domain: m_logger
 define( 'M_LOGGER_PATH', plugin_dir_path( __FILE__ ) );
 require_once ( plugin_dir_path( __FILE__ ) . '/includes/classes/class-logger.php' );
 
-add_action('m-logger', 'm_logger_init', 10, 2 );
-
-function m_logger_init( $data, $label ){
-    $logger = new M_Logger( $data, $label );
+function m_logger( $data = 'no data', $label = 'no label' ){
+     $logger = new ML\Logger( $data, $label );
 };
+
+
+
