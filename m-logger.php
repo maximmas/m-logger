@@ -31,9 +31,10 @@ Text domain: ML
 define( 'M_LOGGER_PATH', plugin_dir_path( __FILE__ ) );
 require_once ( plugin_dir_path( __FILE__ ) . '/includes/classes/class-logger.php' );
 
-function m_logger( $data = 'no data', $label = 'no label' ){
-     $logger = new ML\Logger( $data, $label );
-};
+
+$logger = new ML\Logger();
+
+
 
 
 
