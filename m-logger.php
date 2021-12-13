@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Plugin Name: M-Logger
 Plugin URI: https://github.com/maximmas/m-logger
@@ -11,7 +11,7 @@ Network: true
 Text domain: ML
 */
 
-/*  Copyright 2020  Maxim Maslov  (email : me@maximmaslov.ru )
+/*  Copyright 2020  Maxim Maslov  (email : maxim.maslov.kd@gmail.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -29,10 +29,16 @@ Text domain: ML
 */
 
 define( 'M_LOGGER_PATH', plugin_dir_path( __FILE__ ) );
-require_once ( plugin_dir_path( __FILE__ ) . '/includes/classes/class-logger.php' );
 
+require_once( M_LOGGER_PATH . '/includes/classes/class-logger.php' );
 
-$logger = new ML\Logger();
+add_action( 'm-logger', 'loggerInit', 10, 2 );
+
+function loggerInit( $data, $label ) {
+	$logger = new ML\Logger( $data, $label );
+	$logger->run();
+}
+
 
 
 
